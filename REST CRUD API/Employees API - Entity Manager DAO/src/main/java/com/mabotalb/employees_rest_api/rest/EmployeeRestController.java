@@ -1,5 +1,6 @@
 package com.mabotalb.employees_rest_api.rest;
 
+import com.mabotalb.employees_rest_api.dao.EmployeeDAO;
 import com.mabotalb.employees_rest_api.entity.Employee;
 import com.mabotalb.employees_rest_api.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
