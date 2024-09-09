@@ -3,6 +3,8 @@ package com.mabotalb.thymeleaf_demo.controller;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -10,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class HelloWorldController {
 
     // Create a controller method to show the initial html form
-    @RequestMapping("/showForm")
+    @GetMapping("/showForm")
     public String showForm() {
         return "hello-world-form";
     }
@@ -39,7 +41,7 @@ public class HelloWorldController {
         return "hello-world";
     }
 
-    @RequestMapping("/processFormVersionThree")
+    @PostMapping("/processFormVersionThree")
     public String processFormVersionThree(@RequestParam("studentName") String name, Model model) {
 
         // Convert the data to uppercase
