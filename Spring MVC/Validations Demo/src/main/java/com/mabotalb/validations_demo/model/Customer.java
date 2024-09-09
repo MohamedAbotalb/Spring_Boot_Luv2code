@@ -10,16 +10,17 @@ public class Customer {
     @Size(min = 2, message = "Last name must be at least 2 characters long")
     private String lastName = "";
 
+    @NotNull(message = "Free passes is required")
     @Min(value = 0, message = "Free passes must be greater than or equal to 0")
     @Max(value = 10, message = "Free passes must be less than or equal to 10")
-    private int freePasses;
+    private Integer freePasses;
 
     @Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "Invalid postal code format. Expected format: XXXXX")
     private String postalCode;
 
     public Customer() {}
 
-    public Customer(String firstName, String lastName, int freePasses, String postalCode) {
+    public Customer(String firstName, String lastName, Integer freePasses, String postalCode) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.freePasses = freePasses;
@@ -42,11 +43,11 @@ public class Customer {
         this.lastName = lastName;
     }
 
-    public int getFreePasses() {
+    public Integer getFreePasses() {
         return freePasses;
     }
 
-    public void setFreePasses(int freePasses) {
+    public void setFreePasses(Integer freePasses) {
         this.freePasses = freePasses;
     }
 

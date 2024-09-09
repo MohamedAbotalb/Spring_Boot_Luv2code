@@ -37,6 +37,12 @@ public class CustomerController {
     @PostMapping("/processCustomerForm")
     public String processCustomerForm(@Valid @ModelAttribute("customer") Customer customer, BindingResult bindingResult) {
 
+        System.out.println("Last Name: | " + customer.getLastName() + "|");
+
+        System.out.println("Binding Result: " + bindingResult.toString());
+
+        System.out.println("\n\n\n\n");
+
         if (bindingResult.hasErrors()) {
             return "customer-form";
         }
