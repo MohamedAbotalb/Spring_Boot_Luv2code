@@ -20,6 +20,20 @@
 
       Welcome to the abotalb company home page! <br />
 
+      <hr />
+
+      <!-- Display username and role -->
+      <p>
+        User: <span sec:authentication="principal.username"></span>
+
+        <br />
+        <br />
+
+        Role(s): <span sec:authentication="principal.authorities"></span>
+      </p>
+
+      <hr />
+
       <form action="#" th:action="@{/logout}" method="post">
         <input type="submit" value="Logout" class="btn btn-secondary mt-3" />
       </form>
