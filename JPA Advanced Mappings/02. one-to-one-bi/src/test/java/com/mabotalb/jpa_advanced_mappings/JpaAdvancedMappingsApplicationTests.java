@@ -1,10 +1,10 @@
-package com.mabotalb.mvc_security_demo;
+package com.mabotalb.jpa_advanced_mappings;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MvcSecurityDemoApplicationTests {
+class JpaAdvancedMappingsApplicationTests {
 
 	@Test
 	void contextLoads() {
