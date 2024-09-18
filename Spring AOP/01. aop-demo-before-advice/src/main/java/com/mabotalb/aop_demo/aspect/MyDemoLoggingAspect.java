@@ -1,17 +1,16 @@
 package com.mabotalb.aop_demo.aspect;
 
+import java.lang.classfile.MethodSignature;
+import java.util.List;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
-import org.springframework.context.annotation.Bean;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-@Aspect
-@Component
-public class MyDemoLoggingAspect {
-
-    // This is where we add all of our related advices for logging
-    // let's start with the @Before advice
-
+import com.mabotalb.aop_demo.Account;
     @Before("execution (public void addAccount())")
     public void beforeAddAccountAdvice() {
 
